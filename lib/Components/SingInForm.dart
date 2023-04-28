@@ -118,7 +118,7 @@ class _SignInFormState extends State<SignInForm> {
                 width: 295,
                 child: ElevatedButton(
                     onPressed: () {
-                      Get.to(Home(), transition: Transition.upToDown);
+                      Get.to(() => Home(), transition: Transition.upToDown);
                     },
                     style: ElevatedButton.styleFrom(
                         elevation: 0,
