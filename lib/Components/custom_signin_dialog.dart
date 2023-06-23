@@ -36,6 +36,7 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                   children: [
                     SingleChildScrollView(
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
                             'Sign In',
@@ -72,7 +73,7 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                                       color: Colors.black26),
                                 ),
                               ),
-                              Expanded(
+                              const Expanded(
                                   child: Divider(
                                       color: Color.fromARGB(20, 0, 0, 0)))
                             ],
@@ -80,8 +81,9 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 20),
                             child: Text(
-                              'Sign up with Email, Apple or Google',
-                              style: GoogleFonts.poppins(color: Colors.black54),
+                              'Sign up with Email Apple or Google',
+                              style: GoogleFonts.poppins(
+                                  color: Colors.black54, fontSize: 13),
                             ),
                           ),
                           Row(
@@ -97,11 +99,11 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                                           // If the button is pressed, return green, otherwise blue
                                           if (states.contains(
                                               MaterialState.pressed)) {
-                                            return BorderSide(
+                                            return const BorderSide(
                                                 width: 0.3,
                                                 color: Color(0xff599B3C));
                                           }
-                                          return BorderSide(
+                                          return const BorderSide(
                                               color: Colors.black);
                                         }),
                                         backgroundColor:
@@ -110,7 +112,7 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                                           // If the button is pressed, return green, otherwise blue
                                           if (states.contains(
                                               MaterialState.pressed)) {
-                                            return Color(0xff599B3C);
+                                            return const Color(0xff599B3C);
                                           }
                                           return Colors.black12;
                                         }),
@@ -131,11 +133,11 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                                           // If the button is pressed, return green, otherwise blue
                                           if (states.contains(
                                               MaterialState.pressed)) {
-                                            return BorderSide(
+                                            return const BorderSide(
                                                 width: 0.3,
                                                 color: Color(0xff599B3C));
                                           }
-                                          return BorderSide(
+                                          return const BorderSide(
                                               color: Colors.black);
                                         }),
                                         backgroundColor:
@@ -144,7 +146,7 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                                           // If the button is pressed, return green, otherwise blue
                                           if (states.contains(
                                               MaterialState.pressed)) {
-                                            return Color(0xff599B3C);
+                                            return const Color(0xff599B3C);
                                           }
                                           return Colors.black12;
                                         }),
@@ -165,11 +167,11 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                                           // If the button is pressed, return green, otherwise blue
                                           if (states.contains(
                                               MaterialState.pressed)) {
-                                            return BorderSide(
+                                            return const BorderSide(
                                                 width: 0.3,
                                                 color: Color(0xff599B3C));
                                           }
-                                          return BorderSide(
+                                          return const BorderSide(
                                               color: Colors.black);
                                         }),
                                         backgroundColor:
@@ -178,7 +180,7 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                                           // If the button is pressed, return green, otherwise blue
                                           if (states.contains(
                                               MaterialState.pressed)) {
-                                            return Color(0xff599B3C);
+                                            return const Color(0xff599B3C);
                                           }
                                           return Colors.black12;
                                         }),
@@ -198,12 +200,12 @@ Future<Object?> CustomSignInDialog(BuildContext context,
                         right: 0,
                         bottom: -48,
                         child: CircleAvatar(
-                            child: Icon(
+                            backgroundColor: Colors.white.withOpacity(0.9),
+                            radius: 16,
+                            child: const Icon(
                               Icons.close,
                               color: Colors.black,
-                            ),
-                            backgroundColor: Colors.white.withOpacity(0.9),
-                            radius: 16))
+                            )))
                   ],
                 ),
               ),
