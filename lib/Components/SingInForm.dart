@@ -15,6 +15,7 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
+  bool isObscured = true;
   double radius = 15;
   @override
   Widget build(BuildContext context) {
@@ -31,6 +32,7 @@ class _SignInFormState extends State<SignInForm> {
             child: SizedBox(
               height: 55,
               child: TextFormField(
+                style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white60,
@@ -75,6 +77,8 @@ class _SignInFormState extends State<SignInForm> {
             child: SizedBox(
               height: 55,
               child: TextFormField(
+                style: TextStyle(color: Colors.black),
+                obscureText: isObscured,
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white60,
@@ -103,7 +107,30 @@ class _SignInFormState extends State<SignInForm> {
                     prefixIcon: Icon(
                       Icons.key_outlined,
                       color: Color(0xff599B3C),
-                    )),
+                    ),
+                    suffixIcon: isObscured
+                        ? GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                isObscured = false;
+                              });
+                            },
+                            child: Icon(
+                              Icons.visibility,
+                              color: Color(0xff599B3C),
+                            ),
+                          )
+                        : GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                isObscured = true;
+                              });
+                            },
+                            child: Icon(
+                              Icons.visibility_off,
+                              color: Color(0xff599B3C),
+                            ),
+                          )),
               ),
             ),
           ),
