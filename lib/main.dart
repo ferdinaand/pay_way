@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'Screens/onboarding.dart';
 
@@ -16,9 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'PAYWAY',
-      theme: ThemeData.dark(
-        useMaterial3: true,
-      ),
+      theme: ThemeData.dark(useMaterial3: true),
       themeMode: ThemeMode.system,
       home: const Onboarding(),
     );
